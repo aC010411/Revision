@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICT revision</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <link rel="icon" type="img/png" href="Screenshot 2025-05-29 214624.png" />
+  </head>
+  <body>
+    <div class="transparent-box">
+      <div class="tab-system">
+        <div class="tab-header-container">
+          
+            
+          </button>
+          <div class="tab-header" id="tabHeader">
+            <button class="tab-button" onclick="openTab(event, 'topic1')">
+              <a
+                href="Network_Categories.html"
+                title="Network_Categories"
+                style="text-decoration: none; color: inherit"
+                >Network Categories</a
+              >
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'topic2')">
+              <a
+                href="Connect_Devices.html"
+                title="Connect_Devices"
+                style="text-decoration: none; color: inherit"
+                >Connecting Devices</a
+              >
+            </button>
+            <button
+              class="tab-button active"
+              onclick="openTab(event, 'topic3')"
+            >
+              <a
+                href="Network cables.html"
+                title="Network_cables"
+                style="text-decoration: none; color: inherit"
+                >Network Cables</a
+              ></button
+            ><button class="tab-button" onclick="openTab(event, 'topic3')">
+              <a
+                href="Wireless_Data transmission.html"
+                title="Wireless Data Transmission"
+                style="text-decoration: none; color: inherit"
+                >Wireless Data Transmission</a
+              ></button
+            ><button class="tab-button" onclick="openTab(event, 'topic3')">
+              <a
+                href="IP.html"
+                title="Internet Protocol (IP) address"
+                style="text-decoration: none; color: inherit"
+                >IP address</a
+              >
+            </button><button class="tab-button " onclick="openTab(event, 'topic3')">
+                        <a href="Web.html" title="Web hosting" style="text-decoration: none; color: inherit;">Web hosting</a>
+                    </button>
+            <!-- Add more tabs as needed -->
+          </div>
+          
+            
+          </button>
+        </div>
+
+        <!-- Tab content sections -->
+        <div id="topic3" class="tab-content" style="display: block">
+          <h1>Network Cables for Wired Network Transmission</h1>
+          <h3>Twisted Pair Cable</h3>
+          <p class="example">
+            The purpose of this is to reduce electromagnetic interference (EMI)
+            and crosstalk. There are two main types of twisted pair cables:<br /><br />1.
+            Unshielded Twisted Pair (UTP) cables<br />2. Shielded Twisted Pair
+            (STP) cables
+          </p>
+
+          <h2>Unshielded Twisted Pair (UTP) Cables</h2>
+          <ul class="network-features">
+            <li>Consists of four pairs of wire twisted together</li>
+            <li>Cat 5 cable is 100Mbps</li>
+            <li>Cat 5e cable is 1Gbps</li>
+            <li>Cat 6 cable is 1Gbps</li>
+            <li>Cat 6e cable is 10Gbps</li>
+          </ul>
+
+          <p class="example">
+            To connect a cable to a device, RJ45 connectors are commonly used
+            for network connection. To increase the coverage of twisted pair
+            cables, we can use repeater to connect them together.
+          </p>
+
+          <h2>Shielded Twisted Pair (STP) Cable</h2>
+          <ul class="network-features">
+            <li>Similar to UTP cables</li>
+            <li>
+              Offer more protection from EMI and crosstalk, but it is more
+              expensive than UTP cables
+            </li>
+          </ul>
+
+          <p class="example">
+            There are few types of STP cables for example the coaxial cable and
+            the optical fibre cable.
+          </p>
+
+          <h3>Coaxial Cable</h3>
+          <ul class="network-features">
+            <li>
+              Contains a conducting copper wire core surrounded by insulating
+              materials and braided wires that are enclosed by a plastic tube
+              cover
+            </li>
+            <li>Commonly used in computer networks with bus topology</li>
+          </ul>
+
+          <h3>Optic Fibre Cable</h3>
+          <p class="example">
+            It has a high transmission speed and can serve long transmission
+            distances as the amount of data loss is small. It converts between
+            optical signals (for transmission) and electrical signals (for
+            computer use).
+          </p>
+
+          <table border="1">
+            <tr>
+              <th></th>
+              <th>Advantage</th>
+              <th>Disadvantage</th>
+            </tr>
+            <tr>
+              <td>UTP Cable</td>
+              <td align="left">1. Low cost<br />2. Easy to install</td>
+              <td align="left">
+                1. Can only be used over a short distance (&lt;100meters)<br />2.
+                Affected by EMI
+              </td>
+            </tr>
+            <tr>
+              <td>STP Cable</td>
+              <td align="left">
+                1. Faster transmission speed compared to UTP<br />2. Less
+                affected by EMI
+              </td>
+              <td align="left">
+                1. Higher cost<br />2. Can only be used in a short distance
+                (&lt;100meters)
+              </td>
+            </tr>
+            <tr>
+              <td>Coaxial Cable</td>
+              <td align="left">
+                1. Easy to install<br />2. Compatible with cable TV
+              </td>
+              <td align="left">
+                1. Cable pipes take up a lot of space<br />2. Cannot withstand
+                any sharp bending
+              </td>
+            </tr>
+            <tr>
+              <td>Optical Fibre Cable</td>
+              <td align="left">
+                1. High transmission speed<br />2. Not affected by EMI<br />3.
+                Larger coverage
+              </td>
+              <td align="left">1. High cost<br />2. Hard to install</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICT revision</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <link rel="icon" type="img/png" href="Screenshot 2025-05-29 214624.png" />
+  </head>
+  <body>
+    <div class="transparent-box">
+      <div class="tab-system">
+        <div class="tab-header-container">
+          
+            
+          </button>
+          <div class="tab-header" id="tabHeader">
+            <button
+              class="tab-button active"
+              onclick="openTab(event, 'topic1')"
+            >
+              <a
+                href="Network_Categories.html"
+                title="Network_Categories"
+                style="text-decoration: none; color: inherit"
+                >Network Categories</a
+              >
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'topic2')">
+              <a
+                href="Connect_Devices.html"
+                title="Connect_Devices"
+                style="text-decoration: none; color: inherit"
+                >Connecting Devices</a
+              >
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'topic3')">
+              <a
+                href="Network cables.html"
+                title="Network_cables"
+                style="text-decoration: none; color: inherit"
+                >Network Cables</a
+              >
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'topic4')">
+              <a
+                href="Wireless_Data transmission.html"
+                title="Wireless Data Transmission"
+                style="text-decoration: none; color: inherit"
+                >Wireless Data Transmission</a
+              ></button
+            ><button class="tab-button" onclick="openTab(event, 'topic3')">
+              <a
+                href="IP.html"
+                title="Internet Protocol (IP) address"
+                style="text-decoration: none; color: inherit"
+                >IP address</a
+              >
+            </button><button class="tab-button " onclick="openTab(event, 'topic3')">
+                        <a href="Web.html" title="Web hosting" style="text-decoration: none; color: inherit;">Web hosting</a>
+                    </button>
+            <!-- Add more tabs as needed -->
+          </div>
+          
+          </button>
+        </div>
+
+        <div id="topic1" class="tab-content" style="display: block">
+          <h1>Network Categories and Network Topologies</h1>
+          <h3>Peer-to-peer Network</h3>
+
+          <ul class="network-features">
+            <li>
+              Devices share the same resources and privileges without a
+              centralized administrative system
+            </li>
+            <li>
+              They can connect and make requests directly with one another
+            </li>
+          </ul>
+
+          <p class="example">
+            For instance, BitTorrent (BT) is a communication protocol for P2P
+            file sharing. It is commonly used in downloading large files, such
+            as videos and Linux installation files.
+          </p>
+
+          <h3>Client/server Networks</h3>
+          <ul class="network-features">
+            <li>
+              A centralised administrative system known as the server is present
+            </li>
+            <li>Shares files and resources to clients connected to it</li>
+          </ul>
+
+          <table border="1">
+            <tr>
+              <th></th>
+              <th>Peer-to-peer network</th>
+              <th>Client/server Network</th>
+            </tr>
+            <tr>
+              <td>Advantage</td>
+              <td style="text-align: left">
+                1. Low cost<br />2. Easy to set up<br />3. Flexible, easy to add
+                or remove device
+              </td>
+              <td style="text-align: left">
+                1. Better user management<br />2. More secure<br />3. Data
+                back-up and recovery is easier
+              </td>
+            </tr>
+            <tr>
+              <td>Disadvantage</td>
+              <td style="text-align: left">
+                1. Less secure<br />2. Difficult to organise a large number of
+                files
+              </td>
+              <td style="text-align: left">
+                1. High cost<br />2. Difficult to set up and maintain
+              </td>
+            </tr>
+          </table>
+
+          <h3>Network Topologies</h3>
+
+          <p class="example">
+            Network topology refers to the layout of a network. Physical
+            topology describes how devices in a network are wired together,
+            while logical topology decribes how data is transmitted within a
+            network.
+          </p>
+
+          <ol class="network-features">
+            <li>
+              <b>Ring Topology : </b>If one device stops working, the network
+              won't work properly
+            </li>
+            <li>
+              <b>Star Topology : </b>If on device (not the central device) stops
+              working, the network won't be affected
+            </li>
+            <li>
+              <b>Bus topology : </b>If the bus is damaged then the whole network
+              fails
+            </li>
+            <li>
+              <b>Mesh topology : </b>A failure of a single node doesn't affect
+              the network connectivity. However, the cost is high and it is
+              difficult to set up
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

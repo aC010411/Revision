@@ -1,0 +1,309 @@
+.tab-system {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  max-width: 1200px;
+  margin: 30px auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Tab header */
+.tab-header {
+  display: flex;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Tab buttons */
+.tab-button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 18px 24px;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+  position: relative;
+}
+
+.tab-button:hover {
+  background-color: #e9ecef;
+  color: #333;
+}
+
+.tab-button.active {
+  background-color: #ffffff;
+  color: #2c7be5;
+}
+
+.tab-button.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #2c7be5;
+}
+
+/* Navigation buttons */
+.tab-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  gap: 10px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  background-color: #2c7be5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-button:hover {
+  background-color: #1a68d1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:active {
+  transform: translateY(0);
+}
+
+/* Tab content */
+.tab-content {
+  display: none;
+  padding: 30px;
+  animation: fadeEffect 0.4s;
+  background-color: #ffffff;
+  min-height: 300px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Animation */
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Add some responsive behavior */
+@media (max-width: 768px) {
+  .tab-header {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .tab-button {
+    padding: 15px 18px;
+    font-size: 16px;
+    flex: 1;
+    text-align: center;
+  }
+
+  .tab-nav {
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+  }
+  .tab-header::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+  .tab-button {
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+  }
+}
+/* Style for right-aligned ordered list in table cells */
+td ol.right-aligned-list {
+  text-align: right;
+  list-style-position: inside; /* Puts numbers inside content flow */
+  padding-left: 0; /* Remove default padding */
+  margin: 0; /* Remove default margins */
+}
+
+/* If you want the numbers right-aligned but text left-aligned */
+td ol.right-aligned-list.split-align {
+  list-style-position: outside;
+  padding-left: 1.5em; /* Space for numbers */
+}
+
+td ol.right-aligned-list.split-align li {
+  text-align: left;
+  padding-right: 1.5em; /* Space for numbers */
+}
+
+/* General table styling (optional) */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.transparent-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 40px;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 20px 0;
+}
+
+.transparent-box h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+
+.transparent-box h3 {
+  color: #34495e;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.network-features {
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px 0;
+  list-style-position: outside;
+  padding-left: 20px;
+}
+
+.network-features li {
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.example {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 20px 0;
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .transparent-box {
+    padding: 25px 15px;
+    width: 95%;
+  }
+
+  .transparent-box h1 {
+    font-size: 1.8rem;
+  }
+
+  .transparent-box h3 {
+    font-size: 1.3rem;
+  }
+
+  .network-features li,
+  .example {
+    font-size: 1rem;
+  }
+}
+h4 {
+  font-size: xx-large;
+}
+
+/* Add this to your existing styles.css */
+.domain-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.domain-label {
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #555;
+}
+
+.domain-part {
+  position: static; /* Remove absolute positioning */
+  margin-top: 20px; /* Space for label */
+}
+.domain-part.top-level {
+  border-radius: 0 8px 8px 0;
+  background: #e6f0ff;
+}
+
+.domain-part.second-level {
+  background: #d0e0ff;
+}
+
+.domain-part.third-level {
+  border-radius: 8px 0 0 8px;
+  background: #b8d0ff;
+}
+
+.domain-part.subdomain {
+  background: #a0c0ff;
+}
+
+.domain-arrow {
+  font-size: 24px;
+  color: #666;
+  align-self: center;
+  padding: 0 5px;
+}
+.domain-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5px;
+}
