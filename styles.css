@@ -8,14 +8,32 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Tab header */
+/* Tab header - now scrollable on all devices */
 .tab-header {
   display: flex;
   background-color: #f8f9fa;
   border-bottom: 1px solid #e0e0e0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
-/* Tab buttons */
+/* Hide scrollbar but keep functionality */
+.tab-header::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.tab-header::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.tab-header::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Tab buttons with better mobile touch targets */
 .tab-button {
   background-color: inherit;
   border: none;
@@ -27,6 +45,8 @@
   font-weight: 500;
   color: #555;
   position: relative;
+  white-space: nowrap;
+  flex-shrink: 0; /* Prevent buttons from shrinking */
 }
 
 .tab-button:hover {
@@ -51,11 +71,12 @@
 
 /* Navigation buttons */
 .tab-nav {
-  margin-left: auto;
   display: flex;
   align-items: center;
   padding: 0 15px;
   gap: 10px;
+  flex-shrink: 0; /* Prevent nav from shrinking */
+  margin-left: auto;
 }
 
 .nav-button {
@@ -69,6 +90,7 @@
   font-weight: 500;
   transition: all 0.2s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
 }
 
 .nav-button:hover {
@@ -91,6 +113,40 @@
   font-size: 17px;
   line-height: 1.6;
   color: #444;
+  overflow-y: auto; /* Add vertical scrolling if content is too tall */
+}
+
+/* Animation */
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .tab-button {
+    padding: 15px 18px;
+    font-size: 16px;
+  }
+
+  .tab-nav {
+    position: sticky;
+    right: 0;
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-left: 0;
+  }
+  
+  .nav-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
 }
 
 /* Animation */
@@ -113,7 +169,7 @@
     scroll-behavior: smooth;
     white-space: nowrap;
     -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: 10px; /* Firefox */
   }
   .tab-button {
     padding: 15px 18px;
@@ -128,7 +184,7 @@
     padding: 10px;
   }
   .tab-header::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
+    display: 10px; /* Chrome, Safari and Opera */
   }
 
   .tab-button {
@@ -187,7 +243,7 @@ body {
   border-radius: 12px;
   padding: 40px;
   width: 90%;
-  max-width: 1000px;
+  max-width: 800px;
   text-align: center;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -307,3 +363,5 @@ h4 {
   align-items: center;
   margin: 0 5px;
 }
+
+
